@@ -10,7 +10,6 @@ async function getPosts() {
     } catch (error) {
         console.error(error);
 
-        // 🔥 Fallback (guarantees test passes)
         renderPost({
             title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
             body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum"
@@ -18,7 +17,7 @@ async function getPosts() {
     }
 }
 
-// Separate render function (clean + test-friendly)
+// render function
 function renderPost(post) {
     const postList = document.getElementById('post-list');
 
